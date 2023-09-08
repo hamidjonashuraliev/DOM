@@ -41,21 +41,37 @@
 // // myCircle.textContent = 'E'
 // // circleWrapper.insertAdjacentHTML('beforeend', '<pre>E</pre>')
 
+const box = document.querySelector("#box");
+const buttons = document.querySelectorAll("button");
+const circles = document.querySelectorAll(".circle");
+const hearts = document.querySelectorAll(".heart");
+const circleWrapper = document.querySelector(".circle__wrapper");
 
-const box = document.querySelector('#box')
-const buttons = document.querySelectorAll('button')
-const circles = document.querySelectorAll('.circle')
-const hearts = document.querySelectorAll('.heart')
+box.style.cssText = "background-color: red; width: 100px; height: 100px";
 
-box.style.cssText = 'background-color: red; width: 100px; height: 100px'
-
-buttons[0].style.width = '100px'
-circles[2].style.backgroundColor = 'yellow'
+buttons[0].style.width = "100px";
+circles[2].style.backgroundColor = "yellow";
 
 // for(let i = 0; i < hearts.length; i++) {
 //     hearts[i].style.backgroundColor = 'blue'
 // }
 
 hearts.forEach((item) => {
-    item.style.backgroundColor = 'yellow'
-})
+    item.style.backgroundColor = "yellow";
+});
+
+const btn = document.createElement("button");
+document.body.append(btn);
+const myCircle = document.createElement("div");
+
+myCircle.classList.add("circle");
+
+// circleWrapper.before(myCircle)
+
+// circles[0].before(myCircle)
+// circles[1].replaceWith(myCircle)
+// circleWrapper.append(myCircle)
+// myCircle.innerHTML = '<pre>E</pre>'
+// myCircle.textContent = 'E'
+
+// circleWrapper.insertAdjacentHTML("afterbegin", "<pre>E</pre>" )
